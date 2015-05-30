@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *yField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)addData:(id)sender;
+- (IBAction)linReg:(id)sender;
 
 @end
 

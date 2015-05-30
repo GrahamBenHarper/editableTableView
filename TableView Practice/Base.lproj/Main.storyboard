@@ -55,6 +55,15 @@
                                     <action selector="addData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qyB-O8-AxN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-CV-06S">
+                                <rect key="frame" x="130" y="45" width="61" height="30"/>
+                                <state key="normal" title="compute">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linReg:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zTz-0d-xfN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

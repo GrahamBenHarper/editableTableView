@@ -128,6 +128,46 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 
+// Most of this is Kellan's function from RegressionAnalytics
+- (IBAction)linReg:(id)sender {
+    if(t==0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Linear Regression" message:[NSString stringWithFormat:@"No data has been entered"] delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+    
+    
+    //Sum of the products of the x's and the y's
+    double xy = 0;
+    for(int i = 0; i < _inputXValues.count; i++) {
+        xy += [_inputXValues[i] doubleValue] * [_inputYValues[i] doubleValue];
+    }
+    
+    //Sum of the x's squared
+    double xSquare = 0;
+    for(NSNumber *num in _inputXValues)
+    {
+        xSquare += pow([num doubleValue], 2);
+    }
+    
+    //Sum of the y's squared
+    double ySquare = 0;
+    for(NSNumber *num in _inputYValues)
+    {
+        ySquare += pow([num doubleValue], 2);
+    }
+    
+    //Calculate the r value
+    double r = xy / sqrt(xSquare * ySquare);
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Linear Regression" message:[NSString stringWithFormat:@"A regression was found \n with a %1.5f r-squared value!",r] delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    [alert show];
+    }
+}
+
+
 // method to remove data from the arrays
 - (IBAction)removeData
 {
